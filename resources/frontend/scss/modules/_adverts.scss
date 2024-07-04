@@ -1,0 +1,106 @@
+.adverts {
+  @extend .container;
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  &_search {
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    padding: .0em 1.25em; 
+    font-size: 1.5rem;
+    padding-right: 0;
+    display: block;
+    height: 36px;
+    margin: 0 -5px;
+    @extend .font-weight-light;
+  }
+
+  input[type=submit] {
+    background-color: $gold;
+    color: $white;
+    border-width: 0;
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  &_single {
+    border: solid 1px #b7b7b7;
+
+    &__title {
+      font-family: $OpenSans;
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+
+    &__price {
+      font-family: $OpenSans;
+      font-weight: 600;
+    }
+
+    &.featured {
+      border-color: $dixieOrange;
+
+      &:after {
+        content: "Featured";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 97px;
+        background-color: $dixieOrange;
+        padding: .6em 1.3em;
+        font-family: $OpenSans;
+        color: $white;
+        font-weight: 700;
+        font-size: 1.4rem;
+        @include media-breakpoint-up(lg) {
+          top: 15px;
+          right: 15px;
+        }
+      }
+    }
+
+    &__new {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 40px solid $dixieOrange;
+      transform: rotate(135deg);
+      left: -12px;
+      top: -6px;
+
+      &::after {
+        font-family: $OpenSans;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        content: "New";
+        color: #fff;
+        right: -15px;
+        z-index: 1000;
+        top: -36px;
+        transform: rotate(180deg);
+        font-size: 1.1rem;
+      }
+
+    }
+
+    &__tag {
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: capitalize;
+      font-family: $OpenSans;
+    }
+
+    img {
+      box-shadow: 0px 0px 6px #00000010;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 1300px;
+  }
+}

@@ -1,0 +1,74 @@
+/**
+ * Base
+ */
+
+*,
+*:before,
+*:after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+  font-size: 62.7%; 
+}
+
+body { 
+  background-color:$white;
+  font-size: 16px; /* px fallback */
+  font-size: 1.6rem; /* default font-size for document */
+  line-height: 1.5; /* a nice line-height */ 
+  font-family: $OpenSans;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: $OpenSans;
+  color: $black;
+  letter-spacing: 0.05em; 
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+h2 {
+  font-size: 2.8em;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2.1rem;
+} 
+
+h5 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: $OpenSans;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+
+a {
+  color: $gold;
+
+  &:hover {
+    color: $gold;
+    text-decoration: none;
+  }
+}
+
+img{ max-width:100%;}
+

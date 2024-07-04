@@ -1,0 +1,29 @@
+/* Search Panel */
+.c-search-block{
+    @extend .position-relative; 
+    z-index:9;
+
+    &__inner{
+        background-color: rgba(16, 26, 35, .8);
+        p{
+            color:$white; 
+            margin-bottom: 0;
+            margin-top: 8px;
+            text-align: right;
+            @include media-breakpoint-down(lg) {
+              text-align: left;
+              margin-top: 0;
+            }
+        }
+    }
+
+    .form-control{
+        height: 36px;
+        padding: 0;
+    }
+} 
+.btn--search{
+    @include media-breakpoint-down(lg){
+        max-width: none;
+    }
+}

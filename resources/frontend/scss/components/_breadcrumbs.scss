@@ -1,0 +1,28 @@
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+  
+    li {
+      display: inline;
+      color: $black;
+      font-family: $OpenSans;
+      font-weight: 300;
+      font-size: 1.4rem;
+  
+      a {
+        color: $black;
+      }
+  
+      &:after {
+        padding: 0 .4em;
+        content: "/";
+      }
+  
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  
+  }

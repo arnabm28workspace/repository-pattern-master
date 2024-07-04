@@ -1,0 +1,188 @@
+.login {
+  // Hero Background
+  &__hero {
+    min-width: 100%;
+    background-size: cover;
+    background-image: url('../images/login-hero_lg.jpg');
+    position: relative;
+    background-position: center center;
+  
+    @include media-breakpoint-up(lg) {
+      height:auto;
+//      background-image: url("../images/login-hero_lg.jpg"); 
+    }
+
+    @include media-breakpoint-up(xxl) {
+      height: 100vh; 
+    }
+
+    &::after {
+        background-color: rgba(0, 0, 0, .2);
+        content: " ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    &--password {
+       height: 100vh;
+
+      .login__container { 
+        padding-bottom: 0;
+        padding-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 0;
+      }
+    }
+  }
+
+  // Login Panel
+  &__container {
+    max-width: 92%;
+    z-index: 1000;   
+    padding-top:130px;
+    padding-bottom: 130px;
+    position: relative;
+    @extend .container;
+
+    @include media-breakpoint-up(md) {
+      padding-top:250px;
+    }
+     
+    @include media-breakpoint-up(lg) {
+      padding-top:150px;
+      max-width: 868px !important;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    label {
+      @extend .font-family-Open-sans;
+      @extend .text-gray; 
+      font-size: 1.4rem;
+      letter-spacing: .05em; 
+    } 
+
+    input[type="submit"]{
+      padding:0.9em 1.7em;  
+      @extend .btn--full-width;
+      @extend .font-weight-bold;        
+    }
+
+    .check-container {
+      font-size:13px;
+      @include media-breakpoint-up(lg) {
+        max-width:100%;
+      }
+    }
+
+    .forgot-passwor-link {
+      font-size:14px;
+      font-family: $OpenSans;
+      color:$white;
+      margin-top: 30px;
+      text-decoration: underline;
+      display: inline-block;
+      @extend .font-weight-bold; 
+    }
+
+    .options-links{
+      font-size: 14px;
+      color: $white;
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        width: 40%;
+        height: 1px;
+        position: absolute;
+        background: $white;
+        top: 10px;
+      }
+
+      &:before {
+        left: 0; 
+      }
+
+      &:after { 
+        right: 0; 
+      }
+    } 
+  }
+
+  // Register Form Panel 
+  &__register-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white;
+    padding:23px;
+
+    @include media-breakpoint-up(lg) {
+      padding:20px 65px 20px 65px; 
+    }
+
+    .form-control{
+        background-color: transparent;
+        border:1px solid #C7C7C7;
+    }
+  }
+
+  // Login Form Panel
+  &__login-form {
+    display: block;
+    background-color: $dixieOrange;
+    display: none;
+    padding:100px 23px;
+
+    @include media-breakpoint-up(lg) {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding:100px 65px;
+    } 
+
+    input[type="submit"]{ 
+      @extend .btn--outline;
+    }
+  }
+
+  &__forgot-password { 
+    background-color: $dixieOrange;
+    padding: 80px 30px;
+
+    .control-label {
+      color:$white;
+      @extend .font-weight-bold;
+    }
+
+    .login-head {
+      color:$white;
+      font-size: 20px;
+      margin-bottom: 20px;
+    } 
+
+    button {
+      @extend .btn--full-width;
+      @extend .btn--outline;
+    }
+  }
+}
+
+.js-show-register{
+  display: none;
+}

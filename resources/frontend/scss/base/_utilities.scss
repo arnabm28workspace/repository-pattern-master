@@ -1,0 +1,47 @@
+
+// Font Family
+//.font-family-roboto-slab{font-family: $robotoSlab; }
+.font-family-roboto-slab{font-family: $OpenSans; }
+.font-family-righteous{ font-family: $righteous;}
+.font-family-montserrat{ font-family: $montserrat;}
+.font-family-lato{ font-family: $lato;}
+.font-family-comfortaa{ font-family: $comfortaa;}
+.font-family-roboto{ font-family: $roboto;}
+
+.font-family-Open-sans{ font-family: $OpenSans;}
+
+// Font Weights
+.font-weight-light{ font-weight:$font-light;}
+.font-weight-regular{font-weight:$font-normal;}
+.font-weight-medium{font-weight:$font-medium;}
+.font-weight-semibold{ font-weight:$font-semibold;} 
+.font-weight-bold{ font-weight:$font-bold;}
+
+// Text Colors
+.text-white{ color:$white;}
+.text-black{ color:$black;}
+.text-orange{ color:$dixieOrange;}
+.text-gray{color:$gray;}
+
+// Text Size
+.text-sml{ font-size:12px;}
+.text-xs{ font-size:14px;}
+.text-sm{ font-size:16px;}
+.text-24{font-size: 24px;}
+
+// background colors
+.bg-orange{ background-color:$dixieOrange!important; }
+.bg-orange-dark{ background-color:$dixieOrangeDark!important; }
+.bg-white{ background-color: $white!important;}
+.bg-black{ background-color: $black!important;}
+.bg-gray{background-color: $gray!important;}
+.bg-light-gray{background-color: #f9f9f9;}
+
+// Button Style
+.button-font-family{ @extend .font-family-roboto-slab ;}
+.button-bg-color{ @extend .bg-orange; }
+.button-bg-hover-color{ @extend .bg-orange-dark }
+
+// border
+.border-none{border: none;}
+.border-top-none{border-top: none;}

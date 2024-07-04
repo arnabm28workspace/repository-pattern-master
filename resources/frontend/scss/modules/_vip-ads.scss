@@ -1,0 +1,117 @@
+.vip-ads {
+  @extend .container-fluid;
+  padding: 0 15px;
+
+  .vip-carousel {
+    .ad-holder {
+      
+      position: initial;
+      padding: 0;
+
+      &__text {
+        left: 1px;
+        width: calc(100% - 2px);
+        @extend .text-black;
+        @extend .font-family-Open-sans;
+        @extend .font-weight-light;
+
+        .ad-holder_tagline{
+          @extend .font-weight-semibold;
+        }
+      }
+
+      &__image{
+        @extend .position-relative;
+      }
+
+      &__user-badge{
+        @extend .position-absolute;
+        @extend .text-center;
+        @extend .font-family-Open-sans;
+        @extend .text-white;
+        @extend .bg-orange;
+        @extend .text-xs;
+        content:'';
+        width:80px;
+        height:37px;  
+        bottom:12px;
+        right:12px;
+        padding-top: 7px;
+      }
+    }
+  }
+} 
+.ad-list-img{
+    position: relative;
+    .profile_new{
+        left: -11px;
+    }
+}
+.adlist-wrap {
+    padding: 15px;
+    border: solid 1px #E8E8E8;
+}
+.addlist-inner{
+    padding: 22px 22px 27px 0;
+    @include media-breakpoint-down(md){
+        padding: 15px;
+    }
+}
+.adverts_single{
+    &.highlight{
+        border-color:#e0a216;
+        background: #fdf9ef;
+    }
+}
+.adlist-tag{
+    padding-top: 9px;
+    p{
+        margin-right: 10px;
+        font-weight: normal;
+        background: #e0a216;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        a{
+            color: #fff !important;
+        }
+        &.adverts_single__tag__cat{
+            background: #000;
+        }
+    }
+}
+.list-image {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.vip-carousel{
+    .owl-item{
+        border: 1px solid #b7b7b7;
+        .ad-holder_name{
+            padding: 15px;
+            font-weight: 400 !important;
+        }
+    }
+    
+}
+.feature-slider{
+    .slick-prev{
+        left: -14px !important;
+    }
+    .slick-next {
+        right: 3px !important;
+    }
+    .slick-next:before, .slick-prev:before{
+        color: #000;
+        font-size: 30px;
+        opacity: 1;
+    }
+}
+.slick-dots li{
+    margin: 0;
+}

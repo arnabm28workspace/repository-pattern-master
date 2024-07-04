@@ -1,0 +1,192 @@
+
+.home {
+  /* Home Hero */
+  &__hero {
+    @extend .container-fluid; 
+    @extend .w-100; 
+    @extend .position-relative; 
+    background-position: center;
+    background-size: cover;
+    padding: 20.75em 0 3em 0;
+
+
+    &:after {
+      content: " ";
+      background-color: rgba(0, 0, 0, .2);
+      @extend .position-absolute; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    } 
+
+    @include media-breakpoint-up(lg) {
+      //background-image: url("../images/hero_lg.jpg"); 
+      padding: 30.56em 0 3em 0;
+    }
+  }
+
+  /* Latest Add Carousel */
+  
+  &__latest {
+    @extend .container;
+    @include media-breakpoint-up(xxl) {
+        max-width: 1680px;
+    }
+    h2 {
+      margin: .666em 0;
+
+    }
+    > a {
+      margin-top: 1em;
+      position: relative;
+    }
+  }
+}
+
+.home-carousel {
+    .item-holder_text{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }
+    .item-holder_text{
+         padding: 15px 10px 10px; 
+        font-weight: $font-normal !important;
+    }
+    .item-holder_price{
+        padding-left: 10px;
+    }
+    .owl-item{
+        border: 1px solid #b7b7b7;
+    }
+    
+}
+.home-carousel .image-corp{
+    height: 223px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include media-breakpoint-down(lg){
+       height: 350px; 
+    }
+}
+.owl-theme {
+    .owl-nav{
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background: #e0a216 !important;
+            width: 30px;
+            height: 30px;
+            span{
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            background: #e0a216 !important;
+            width: 30px;
+            height: 30px;
+            span{
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+.home-carousel.owl-carousel .owl-nav.disabled{
+    display: block !important;
+}
+.breadcrumb{
+    background: transparent;
+    padding-left: 0;
+}
+.adv-image img{
+    margin: 0 15px;
+} 
+.slick-innar-wrap{
+    padding: 10px 10px 10px 0;
+    .slick-innar-image{
+        position: relative;
+        width: 100%;
+        height: 295px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        .profile_new{
+            left: -26px;
+        }
+    }
+    .slick-innar-col{
+        border: 1px solid #b7b7b7;
+    }
+    .adlist-tag{
+        p{
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+    }
+}
+
+.feature-slider{
+    .slick-track{
+        margin-left: 0;
+        margin-right: 0; 
+    }
+}
+.home-slider.slick-dotted.slick-slider {
+    margin-bottom: 57px; 
+    @include media-breakpoint-down(md){
+        margin-bottom: 42px;
+    }
+}
+.home-slider{
+    .slick-track{
+        margin-left: 0;
+        margin-right: 0; 
+    }
+    .slick-next{
+        &:before{
+            font-size: 30px;
+            opacity: 1;
+        }
+    }
+    .slick-prev{
+        &:before{
+            font-size: 30px;
+            opacity: 1;
+        }
+    }
+    .slick-innar-wrap{
+        @include media-breakpoint-down(sm){
+           padding: 0;
+        }
+    }
+}
+.ad-holder__user-badge {
+    background: #e0a216;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.slick-innar-wrap .slick-innar-col.highlight {
+    border-color: #e0a216;
+    background: #fdf9ef;
+}
+.text-center{
+    &.view-more-btn{
+        padding: 25px 0 20px;
+        @include media-breakpoint-down(md){
+               padding: 0 0 18px;
+        }
+    }
+}

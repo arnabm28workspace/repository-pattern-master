@@ -1,0 +1,95 @@
+.profile {
+  @include media-breakpoint-up(xl) {
+    max-width: 1245px;
+  }
+
+  &_contact {
+    a {
+      position: relative;
+
+      i {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        z-index: 100;
+      }
+    }
+  }
+
+  .card {
+    border-radius: 0;
+    border-color: #b7b7b7;
+    font-family: $OpenSans;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-family: $OpenSans;
+    text-transform: none;
+    letter-spacing: .01em;
+  }
+
+  &_back {
+    font-weight: 400;
+    font-family: $OpenSans;
+    font-size: 1.4rem;
+  }
+
+  &_new {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid $dixieOrange;
+    transform: rotate(135deg);
+    left: -23px;
+    top: -6px;
+
+    &::after {
+      font-family: $montserrat;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: absolute;
+      content: "New";
+      color: #fff;
+      right: -15px;
+      z-index: 1000;
+      top: -36px;
+      transform: rotate(180deg);
+      font-size: 1.1rem;
+    }
+
+  }
+    &_new_chk{
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid #e0a216;
+        transform: rotate(135deg);
+        left: -26px;
+        top: -6px;
+        z-index: 2;
+        opacity: 0;
+        &::after {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 700;
+            text-transform: uppercase;
+            position: absolute;
+            content: "\F00C";
+            color: #fff;
+            right: -11px;
+            z-index: 1000;
+            top: -34px;
+            transform: rotate(-139deg);
+            font-size: 1.1rem;
+        }
+    }
+}
+.prev-details-value{
+    border: 1px solid #ccc;
+    margin-bottom: 6px;
+    padding-left: 5px;
+}

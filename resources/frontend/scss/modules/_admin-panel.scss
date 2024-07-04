@@ -1,0 +1,327 @@
+.admin-panel {
+  &__bar { 
+    background-color: $black;
+    color: $white;
+    font-family: $OpenSans;
+    padding: .8em 2em;
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 58px;
+    @include media-breakpoint-down(md){
+       padding-left: 15px;
+    }
+
+    a {
+      color: $white;
+      padding-left: 1em;
+      font-size: 1.4rem;
+
+      i {
+        padding-right: .3em;
+      }
+    }
+  }
+
+  &__body{
+    border: 1px solid #b7b7b7;
+    margin-bottom: 40px;
+      @include media-breakpoint-down(lg){
+          overflow: hidden;
+      }
+    form{
+      border:none;
+    }
+  }
+
+  &__content{
+
+    @include media-breakpoint-up(lg) {
+      border-left:1px solid #b7b7b7;
+    }
+    
+    .text-strong {
+      @extend .font-weight-bold; 
+      display: block;
+      margin-bottom: 20px;
+      color:#6E6E6E;
+    }
+  }
+
+  &__ad-row{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #E6E6E6;
+
+    &:first-child, &:last-child{
+      border-bottom:0;
+    }
+
+    h5{
+      @extend .font-family-Open-sans;
+      @extend .font-weight-bold;
+    }
+
+    p{
+      font-size: 13px;
+    }
+  }
+
+  &__packages-row{
+    margin: 20px;
+    border:1px solid #E6E6E6;
+    
+    @include media-breakpoint-up(lg) {
+      margin: 20px 0 20px 0;
+    }
+  }
+
+  &__packages-col{ 
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .align-items-center;
+      @extend .justify-content-center;
+
+
+      &:first-child{
+        @include media-breakpoint-up(lg) {
+          border-right:1px solid #E6E6E6;
+        }
+      }
+
+      img{
+          @extend .w-100;
+      }
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+ @include media-breakpoint-up(lg) {
+    max-width: 1300px;
+  }
+  @include media-breakpoint-up(1400px) {
+    max-width: 1300px;
+  }
+
+  &_small {
+    max-width: 960px;
+  }
+
+  &_ads {
+    a {
+      font-size: 1.4rem;
+    }
+  }
+
+  form{ 
+    //border: solid #E6E6E6 1px;
+    border-top: 1px;
+    margin-bottom: 4em;
+      @include media-breakpoint-down(md){
+          margin-bottom: 0;
+      }
+  }
+
+  .rates {
+    max-width: 500px;
+
+    input {
+      width: 100%;
+      padding: 9px 1em;
+      text-align: left;
+      margin: .2em 0;
+      font-family: $OpenSans;
+      font-weight: 300;
+      font-size: 1.2rem;
+      border: solid 1px #c7c7c7;
+      border-radius: 3px;
+    }
+  }
+
+  .c-admin-navigation{
+     margin:0;
+     padding:0;
+
+     li{
+       list-style:none;
+       font-size:15px;
+       @extend .font-family-Open-sans;
+        @include media-breakpoint-down(sm){
+           font-size:14px;
+        }
+       .fal{
+         margin-right:13px;
+           @include media-breakpoint-down(sm){
+               margin-right:8px;
+           }
+       }
+
+       &.active{
+         a{
+          background-color: #F7F7F7;
+         }
+       }
+
+       a{
+         @extend .d-block; 
+         @extend .text-black;
+         border-bottom:1px solid #b7b7b7;
+         padding: 20px 15px; 
+           @include media-breakpoint-down(md){
+               padding: 15px;
+           }
+           @include media-breakpoint-down(sm){
+               padding: 15px 8px;
+           }
+         &:hover{
+           background-color: #F7F7F7;
+         }
+       }
+     }
+  }
+}
+
+
+
+.check-container {
+  //@extend .col-6, .col-lg-4;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #747474;
+  font-family: $OpenSans;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    @include media-breakpoint-down(md){
+        font-size: 14px;
+    }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+    a{
+        text-decoration: underline;
+    }
+}
+
+/* Hide the browser's default checkbox */
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border:1px solid #C7C7C7; 
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+
+.check-container {
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: $dixieOrange;
+    border-color: $dixieOrange;
+  }
+}
+
+/* When the checkbox is checked, add a blue background */
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.check-container {
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after { 
+    left: 5px;
+    top: 1px;
+    width: 7px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+
+.dropzone{
+    .dz-preview{
+        margin: 0 !important;
+        z-index: 10;
+        background: #fff;
+        padding: 10px;
+        span{
+            font-size: 12px;
+            line-height: normal;
+            font-weight: bold;
+        }
+    }
+}
+.listing-sub{
+    display: none;
+}
+.admin-panel {
+	.c-admin-navigation {
+		li.active {
+			.listing-sub {
+				display: block;
+                li{
+                    a{
+                        padding: 10px 20px 10px 44px;
+                        .fas{
+                            margin-right: 13px;
+                        }
+                    }
+                    &.active-sub{
+                        a{
+                            background: #E0A216;
+                            color: #fff;
+                        }
+                    }
+                }
+			}
+		}
+	}
+}
+.contact-me a {
+    font-weight: 600;
+}
+.rates label {
+    line-height: 38px;
+}
+.bullet-circle {
+  background: #0a0505;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  /* vertical-align: middle; */
+  margin: 0 10px 0 9px;
+  border-radius: 50%;
+}

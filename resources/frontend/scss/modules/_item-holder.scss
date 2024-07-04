@@ -1,0 +1,43 @@
+.item-holder {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &_text, &_price {
+    font-family: $OpenSans;
+    font-size: 1.6rem;
+  }
+
+  &_price {
+    font-weight: 600;
+    color: $black;
+  }
+
+  &_tagline {
+    font-style: italic;
+    text-transform: uppercase;
+    font-family: $OpenSans;
+    font-weight: 500;
+    letter-spacing: .05em;
+    color: $black;
+    padding-bottom: .5em;
+  }
+
+  &.vip {
+    &::after {
+      content: "vip";
+      text-transform: uppercase;
+      background-color: $gold;
+      height: 43px;
+      width: 55px;
+      color: #fff;
+      position: absolute;
+      bottom: 63px;
+      font-family: $OpenSans;
+      font-size: 2rem;
+      padding: 5px 12px;
+      left: 6px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.btn {
+  @extend .button-bg-color;
+  @extend .text-white;  
+  @extend .rounded-0; 
+  @extend .font-weight-medium; 
+  @extend .button-font-family;
+  display: inline-block;
+  font-size: 1.8rem; 
+  letter-spacing: .03em; 
+  
+  &--xs{
+    font-size:14px;
+    padding: .5em 1.7em;
+  }
+
+  &--md{
+    padding: .70em 2.45em;
+  }
+
+  &--outline{
+    border:1px solid $white;
+  }
+
+  &--gray{
+    @extend .bg-gray; 
+  }
+
+  &--full-width{
+     @extend .w-100;
+     @extend .mw-100;
+     @extend .d-block;
+  }
+
+  &:hover{
+     @extend .text-white;  
+     @extend .button-bg-hover-color; 
+  } 
+}

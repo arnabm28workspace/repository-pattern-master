@@ -1,0 +1,37 @@
+$righteous: 'Righteous', cursive;
+$montserrat: 'Montserrat', sans-serif;
+$robotoSlab: 'Roboto Slab', serif;
+
+$lato: 'Lato', sans-serif;
+$comfortaa: 'Comfortaa', cursive;
+
+$roboto: 'Roboto', sans-serif;
+
+$OpenSans: 'Open Sans', sans-serif;
+
+$black: #12181C;
+$dixieOrange: #E0A216;
+$dixieOrangeDark: darken($dixieOrange, 5%);
+$white: #FDFDFD;
+$gold: #D5AB3A;
+$darkGrey: #7E7E7E;
+$lightGrey: #F5F5F5;
+$white: #FDFDFD;
+$gray: #747474;
+
+$font-light:300;
+$font-normal:400;
+$font-medium:600;
+$font-semibold:600;
+$font-bold:700;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1600px
+); 
+
+

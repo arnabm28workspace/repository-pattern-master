@@ -1,0 +1,82 @@
+.search-holder {
+  width: 320px;
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .intro {
+    color: #2E2E2E;
+    font: Bold 32px/39px $OpenSans;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .place-select {
+    color: #2E2E2E;
+    font-family: $OpenSans;
+    font-size: 2.2rem;
+    margin-bottom: .666em;
+
+    &_btn {
+      margin-top: 2em;
+      background-color: transparent;
+      color: $gold;
+      border: solid 1px $dixieOrange;
+      border-radius: 3px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-family: $OpenSans;
+      font-weight: 700;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      padding: .6666em 0;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: $lightGrey;
+        background-color: $gold;
+      }
+
+    }
+
+    i {
+      color: $gold;
+      margin-left: .2em;
+      left: 0;
+      position: relative;
+      top: 3px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+      i {
+        left: 10px;
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    padding-left: 1em;
+
+    li {
+      font-family: $OpenSans;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #3B3B3B;
+      position: relative;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+      line-height: 1.5;
+
+      &:hover {
+        left: 10px;
+        color: $gold;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,58 @@
+footer {
+  ul{
+    list-style: none;
+    padding: 0;
+    li {
+      @extend .font-family-montserrat; 
+      @extend .text-black;
+      @extend .font-weight-light; 
+      font-size: 1.6rem;
+      line-height: 1.5;
+
+      &:first-of-type {
+        margin-bottom: 1.5em;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.footer {
+  &_add-post {
+    @extend .text-uppercase;
+    @extend .bg-black;  
+    @extend .font-family-roboto-slab;
+    font-size: 2.2rem; 
+
+    h4 {
+      margin-bottom: 20px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+      .btn--md{
+          @include media-breakpoint-down(lg){
+            padding: 8px 25px;
+          } 
+      }
+  }
+
+  &_brand {
+    @extend .font-family-comfortaa; 
+    @extend .text-lowercase;
+    @extend .text-black;
+    font-size: 3.2rem;
+    padding-top: .2em;
+  }
+
+  &_credit {
+    @extend .font-family-montserrat; 
+    @extend .text-black;
+    @extend .font-weight-light; 
+    font-size: 1.4rem;
+  } 
+}

@@ -1,0 +1,86 @@
+.ckeckout{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d7d7d7;
+    @extend .bg-light-gray;
+   .package-name{
+        @extend .font-weight-bold;
+    } 
+    .checkout-price{
+      @extend .font-weight-bold;  
+    }
+    p{
+        @extend .text-xs;
+        margin-bottom: 0;
+    }
+    .duration{
+        @extend .text-sml;
+        @extend .text-gray;
+        strong{
+            @extend .text-black;
+        }
+    }
+}
+.checkout-btn{
+    .btn{
+        line-height: 35px;
+    }
+}
+.even {
+    @extend .bg-light-gray;
+    @extend .border-top-none;
+}
+.subtotal{
+    border-bottom: 2px solid #8e8d8d;
+}
+.adverts_single img.addone-img {
+    margin: 0;
+}
+.addone-desc{
+    p{
+        margin-bottom: 0;
+    }
+}
+.card{
+    &.active-card{
+        background: #fffcf6;
+        border-color: #e0a216;
+        .profile_new_chk{
+            opacity: 1;
+        }
+    }
+}
+.select-feature{
+    margin-top: 14px;
+    padding-right: 15px;
+    @include media-breakpoint-down(md){
+       padding-right: 0; 
+    }
+}
+.s-select {
+    border: 1px solid #ccc;
+    height: 34px;
+    border-radius: 3px;
+    background: #fff;
+    width: 100%;
+    margin-left: 17px;
+    @include media-breakpoint-down(md){
+       margin-left: 0px;
+    }
+    select{
+        width: 100%;
+        height: 32px;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    &.adone-select{
+        margin: 0;
+        display: inline-block;
+        width: 100px;
+        vertical-align: middle;
+        select{
+            margin: 0;
+        }
+    }
+}
