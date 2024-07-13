@@ -26,7 +26,7 @@ class CreateProfilesTable extends Migration
             $table->boolean('notification_repost')->default(false);
             $table->boolean('is_profile_complete')->default(false);
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -12,15 +12,15 @@ class SettingsTableSeeder extends Seeder
 	protected $settings = [
 		[
 			'key'                       =>  'site_name',
-			'value'                     =>  'Viggaro',
+			'value'                     =>  'Repository Pattern Master',
 		],
 		[
 			'key'                       =>  'site_title',
-			'value'                     =>  'Viggaro',
+			'value'                     =>  'Repository Pattern Master',
 		],
 		[
 			'key'                       =>  'default_email_address',
-			'value'                     =>  'arghya@capitalnumbers.com',
+			'value'                     =>  'test@gmail.com',
 		],
 		[
 			'key'                       =>  'currency_code',
